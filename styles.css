@@ -1,0 +1,96 @@
+/* General body styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightpink; /* Light pink background */
+  background-image: url('img/StarGlitter.gif'); /* Path to the background GIF */
+  background-size: 200px 200px; /* Size of each GIF tile */
+  background-repeat: repeat; /* Repeat the GIF */
+  min-height: 100vh; /* Cover the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+}
+
+/* Container for centered image and buttons */
+.center-image {
+  position: relative; /* For positioning the overlay GIF */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for image and buttons */
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between buttons and image */
+}
+
+/* Stack buttons vertically */
+.button-stack {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Spacing for buttons on the left and right sides of the image */
+.left {
+  margin-right: 20px; /* Space between left buttons and image */
+}
+
+.right {
+  margin-left: 20px; /* Space between right buttons and image */
+}
+
+/* Styles for centered image */
+.center-image img {
+  max-width: 1000px; /* Maximum width of the centered image */
+  max-height: 1000px; /* Maximum height of the centered image */
+}
+
+/* Styles for overlay GIF */
+.overlay-gif {
+  position: absolute;
+  top: 10px; /* Position from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  max-width: 500px; /* Maximum width of the GIF */
+  max-height: 200px; /* Maximum height of the GIF */
+  z-index: 1; /* Ensure it is above other content */
+}
+
+/* Styles for buttons */
+.btn {
+  background-color: pink; /* Pink background for buttons */
+  border: none;
+  color: white; /* White text color */
+  padding: 10px 20px; /* Button size */
+  text-align: center;
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  background-color: darkpink; /* Darker pink on hover */
+}
+
+/* Styles for link inside buttons */
+.btn-link {
+  color: white; /* Text color for the link */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the link fill the button */
+  width: 100%; /* Ensure it spans the entire button */
+  height: 100%; /* Ensure it spans the entire button */
+}
+
+.btn-link:hover {
+  color: darkpink; /* Change text color on hover */
+}
