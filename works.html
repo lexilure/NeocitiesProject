@@ -4,22 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Works</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="works.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-  <div class="center-image">
+  <div class="container">
     <h1>My Works</h1>
-    <p>Welcome to the Works page. Here you can showcase your work or projects.</p>
-    
-    <!-- Example links to other content or pages -->
-    <ul>
-      <li><a href="https://example.com/project1">Project 1</a></li>
-      <li><a href="https://example.com/project2">Project 2</a></li>
-      <li><a href="https://example.com/project3">Project 3</a></li>
-    </ul>
+
+    <!-- Image Grid -->
+    <div class="image-grid">
+      <img src="img/1.png" alt="Project 1" onclick="openLightbox(0)">
+      <img src="img/2.jpg" alt="Project 2" onclick="openLightbox(1)">
+      <img src="img/3.jpg" alt="Project 3" onclick="openLightbox(2)">
+      <img src="img/4.jpg" alt="Project 4" onclick="openLightbox(3)">
+      <img src="img/5.png" alt="Project 5" onclick="openLightbox(4)">
+      <img src="img/6.jpg" alt="Project 6" onclick="openLightbox(5)">
+      <img src="img/7.jpg" alt="Project 7" onclick="openLightbox(6)">
+      <img src="img/8.jpg" alt="Project 8" onclick="openLightbox(7)">
+      <img src="img/9.jpg" alt="Project 9" onclick="openLightbox(8)">
+    </div>
+
+    <!-- Lightbox (Tumblr-Style) -->
+    <div id="lightbox" class="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">×</span>
+      <img id="lightbox-img" class="lightbox-img" alt="Enlarged Project Image">
+      <span class="nav-btn prev-btn" onclick="changeImage(-1)">❮</span>
+      <span class="nav-btn next-btn" onclick="changeImage(1)">❯</span>
+    </div>
 
     <!-- Link back to the main page -->
     <a href="index.html" class="btn">Back to Main Page</a>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    let images = document.querySelectorAll(".image-grid img");
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      document.getElementById("lightbox-img").src = images[currentIndex].src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function changeImage(step) {
+      currentIndex = (currentIndex + step + images.length) % images.length;
+      document.getElementById("lightbox-img").src = images[currentIndex].src;
+    }
+
+    // Close lightbox on clicking outside the image
+    document.getElementById("lightbox").addEventListener("click", function (e) {
+      if (e.target === this || e.target.classList.contains("close-btn")) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function (e) {
+      if (document.getElementById("lightbox").style.display === "flex") {
+        if (e.key === "ArrowLeft") changeImage(-1);
+        if (e.key === "ArrowRight") changeImage(1);
+        if (e.key === "Escape") closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
