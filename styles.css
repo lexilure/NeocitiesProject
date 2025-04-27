@@ -115,28 +115,88 @@ body {
 
 #guestbook-btn {
   left: 1081px;
-  top: 630px;
+  top: 0px;
   width: 121px;
 }
 
-#links-btn {
-  left: 1081px;
+
+#closet-btn {
+  left: 900px;
   top: 21px;
+  width: 496px;
+  height: 607px; 
+  
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  
+  background-image: url('img/closet.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  
+
+  color: transparent;
+  font-size: 0;
+  
+  opacity: 1;
+  z-index: 10;
+}
+#closet-btn:hover {
+  background-image: url('img/closet hover.png');
+  transform: none; 
+  background-color: transparent;
+}
+
+#guestbook-btn {
+  left: 1081px;
+  top: 697px;
   width: 121px;
 }
 
 #sketchbook-btn {
-  left: 1220px;
-  top: 607px;
-  width: 150px;
-}
+  left: 1250px;
+  top: 643px;
+  width: 496px;
+  height: 607px; 
+  
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  
+  background-image: url('img/closet.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  
 
+  color: transparent;
+  font-size: 0;
+  
+  opacity: 1;
+  z-index: 10;
+}
+#sketchbook-btn:hover {
+  background-image: url('img/closet hover.png');
+  transform: none; 
+  background-color: transparent;
+}
 
 #bed-image {
   position: absolute;
   left: -10px;
   top: 278px;
   z-index: -1; 
+  max-width: 100%;
+  height: auto;
+}
+#floor-image {
+  position: absolute;
+  left: 0px;
+  top: 512px;
+  z-index: -5; 
   max-width: 100%;
   height: auto;
 }
