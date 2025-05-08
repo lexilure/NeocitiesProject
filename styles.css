@@ -150,39 +150,60 @@ body {
 }
 
 #guestbook-btn {
-  left: 1081px;
-  top: 697px;
-  width: 121px;
-}
-
-#sketchbook-btn {
-  left: 1250px;
-  top: 643px;
-  width: 496px;
-  height: 607px; 
-  
+  left: 1000px;
+  top: 530px;
+  width: 229px;
+  height:215px;
   background-color: transparent;
   border: none;
   box-shadow: none;
   padding: 0;
-  
-  background-image: url('img/closet.png');
-  background-size: contain; 
+
+  background-image: url('img/guestbook.png'); /* Ensure the path is correct */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  
 
   color: transparent;
   font-size: 0;
-  
+
+  opacity: 1;
+  z-index: 10;
+}
+#guestbook-btn:hover {
+  background-image: url('img/guestbook hover.png');
+  transform: none; 
+  background-color: transparent;
+}
+
+
+#sketchbook-btn {
+  left: 1150px;
+  top: 500px;
+  width: 220px;
+  height: 195px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+
+  background-image: url('img/sketchbook.png'); /* Ensure the path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: transparent;
+  font-size: 0;
+
   opacity: 1;
   z-index: 10;
 }
 #sketchbook-btn:hover {
-  background-image: url('img/closet hover.png');
+  background-image: url('img/sketchbook hover.png');
   transform: none; 
   background-color: transparent;
 }
+
 
 #bed-image {
   position: absolute;
@@ -200,6 +221,15 @@ body {
   max-width: 100%;
   height: auto;
 }
+#wall-image{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -10; 
+  max-width: 100%;
+  height: auto;
+}
+
 #girl-gif {
   position: absolute;
   left: 397px;
