@@ -213,6 +213,14 @@ body {
   z-index: 2; 
 }
 
+#pong-gif {
+  position: absolute;
+  width: 230px;
+  height: 205px;
+  left: 790px; 
+  top: 190px;  
+  z-index: -1; 
+}
 #bed-image {
   position: absolute;
   left: -10px;
